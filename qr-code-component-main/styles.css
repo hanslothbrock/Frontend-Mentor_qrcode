@@ -1,0 +1,131 @@
+* {
+    font-weight: 400, 700;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(207, 60%, 93%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(217, 50%, 16%);
+}
+
+body {
+    background-image: url('images/fondo.jpg');
+}
+.body {
+    background-color: var(--light-gray);
+    display: flex;
+    margin: 5% 3%;
+    height: 80vh;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    background-color: var(--white);
+    height: 65%;
+    width: 30%;
+    margin: 8% auto;
+    border-radius: 10px;
+}
+
+.container__qrbox {
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+    margin: 5% auto;
+    display: flex;
+    justify-self: center;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.container--title {
+    color: var(--dark-blue);
+    font-size: 22px;
+    padding: 0px 15px;
+}
+
+.container--subtitle {
+    color: var(--grayish-blue);
+    font-size: 15px;
+    padding: 0px 15px;
+}
+
+@media screen and (max-width:1000px) {
+    .container__qrbox {
+        height: 50%;
+        width: auto;
+    }
+    img {
+        height: auto;
+        width: 80%;
+        object-fit: cover;
+        margin: auto;
+    }
+    .container--title {
+        font-size: 18px;
+    }
+    .container--subtitle {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container__qrbox {
+        height: auto;
+        width: 80%;
+    }
+    img {
+        height: 60%;
+        width: 60%;
+        margin: auto;
+    }
+    .container--title {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .container--subtitle {
+        font-size: 12px;
+    }
+    .container {
+        height: 50%;
+        margin: 23% auto;
+    }
+}
+
+@media screen and (max-width:520px) {
+    body {
+        background-image: none;
+    }
+    .body {
+        margin: 0;
+        height: 100vh;
+    }
+    .container {
+        margin: auto;
+        width: 40%;
+        height: 40%;
+    }
+    .container__qrbox {
+        height: 35%;
+        width: auto;
+    }
+    img {
+        height: 60%;
+        width: 60%;
+        margin: auto;
+    }
+    .container--title {
+        font-size: 13px;
+    }
+    .container--subtitle {
+        font-size: 10px;
+    }
+}
